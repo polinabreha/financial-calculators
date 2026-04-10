@@ -23,8 +23,10 @@ public class MortgageCalculator {
         double a = Math.pow(1 + monthlyInterestRate, numberOfMonthlyPayments);
 
         double mortage = total * ((monthlyInterestRate * a ) / (a -1));
+        double totalInterest = (mortage * numberOfMonthlyPayments) - total;
 
         System.out.printf("The mortgage is $%.2f/mo%n" , mortage);
+        System.out.printf("Total Interest is $%.2f%n", totalInterest);
 
 
 
